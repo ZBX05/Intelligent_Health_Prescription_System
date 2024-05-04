@@ -1,0 +1,1 @@
+jmeter -n -t graph.jmx -l result.csv -e -o report

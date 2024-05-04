@@ -1,0 +1,33 @@
+2024-05-01 09:19:56,025 - model.py[line:108] - INFO: --------Start Training--------
+2024-05-01 09:22:42,203 - model.py[line:132] - INFO: Epochs: 1 | Train Loss: 36.514 | Validate Loss: 32.903 | Validate Accuracy: 0.275
+2024-05-01 09:22:42,707 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:26:28,804 - model.py[line:132] - INFO: Epochs: 2 | Train Loss: 32.322 | Validate Loss: 29.461 | Validate Accuracy: 0.387
+2024-05-01 09:26:29,386 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:32:18,126 - model.py[line:132] - INFO: Epochs: 3 | Train Loss: 29.241 | Validate Loss: 23.983 | Validate Accuracy: 0.584
+2024-05-01 09:32:19,002 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:38:49,992 - model.py[line:132] - INFO: Epochs: 4 | Train Loss: 24.504 | Validate Loss: 19.721 | Validate Accuracy: 0.617
+2024-05-01 09:38:50,580 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:45:29,035 - model.py[line:132] - INFO: Epochs: 5 | Train Loss: 21.908 | Validate Loss: 17.517 | Validate Accuracy: 0.643
+2024-05-01 09:45:29,654 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:52:11,896 - model.py[line:132] - INFO: Epochs: 6 | Train Loss: 20.456 | Validate Loss: 16.141 | Validate Accuracy: 0.657
+2024-05-01 09:52:12,508 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 09:58:29,751 - model.py[line:132] - INFO: Epochs: 7 | Train Loss: 19.502 | Validate Loss: 15.619 | Validate Accuracy: 0.667
+2024-05-01 09:58:30,351 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 10:05:07,718 - model.py[line:132] - INFO: Epochs: 8 | Train Loss: 18.728 | Validate Loss: 15.095 | Validate Accuracy: 0.668
+2024-05-01 10:05:08,278 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 10:11:28,993 - model.py[line:132] - INFO: Epochs: 9 | Train Loss: 17.997 | Validate Loss: 15.185 | Validate Accuracy: 0.664
+2024-05-01 10:17:54,174 - model.py[line:132] - INFO: Epochs: 10 | Train Loss: 17.170 | Validate Loss: 15.347 | Validate Accuracy: 0.665
+2024-05-01 10:24:12,520 - model.py[line:132] - INFO: Epochs: 11 | Train Loss: 16.677 | Validate Loss: 15.415 | Validate Accuracy: 0.672
+2024-05-01 10:24:13,078 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 10:30:38,146 - model.py[line:132] - INFO: Epochs: 12 | Train Loss: 15.936 | Validate Loss: 15.436 | Validate Accuracy: 0.677
+2024-05-01 10:30:38,719 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 10:37:12,381 - model.py[line:132] - INFO: Epochs: 13 | Train Loss: 15.461 | Validate Loss: 15.575 | Validate Accuracy: 0.681
+2024-05-01 10:37:12,980 - model.py[line:145] - INFO: --------Save best model!--------
+2024-05-01 10:37:12,981 - model.py[line:159] - INFO: Early stopping at epoch 13.
+Epochs: 13 | Train Loss: 15.461 | Validate Loss: 15.575 | Validate Accuracy: 0.681
+Best Accuracy: 0.681
+2024-05-01 10:37:12,981 - model.py[line:169] - INFO: Training Finished!
+2024-05-01 10:37:13,351 - execute.py[line:51] - INFO: -------Loading Model From /home/noitom-server/PycharmProjects/pythonProject/Intelligent-Health-System/nlp/ir/Bert-TextCNN/model/model.pth--------
+2024-05-01 10:37:13,767 - execute.py[line:55] - INFO: -------Model Loaded--------
+2024-05-01 10:37:28,950 - execute.py[line:67] - INFO: Test Loss: 17.20056345462799 | Test Accuracy: 0.6438529784537389
+2024-05-01 10:37:28,951 - execute.py[line:69] - INFO: Testing finished.

@@ -1,0 +1,1 @@
+jmeter -n -t login.jmx -l result.csv -e -o report

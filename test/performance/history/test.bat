@@ -1,0 +1,1 @@
+jmeter -n -t history.jmx -l result.csv -e -o report

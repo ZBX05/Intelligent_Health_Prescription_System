@@ -1,0 +1,65 @@
+2023-12-11 21:16:01,855 - model.py[line:129] - INFO: --------Start Training--------
+2023-12-11 21:17:09,693 - model.py[line:155] - INFO: Epochs: 1 | Train Loss: 4554.291 | Validate Loss: 2056.489 | Validate Accuracy: 0.803 | Validate Recall: 0.412 | Validate F1: 0.406
+2023-12-11 21:17:09,761 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:18:12,908 - model.py[line:155] - INFO: Epochs: 2 | Train Loss: 1207.886 | Validate Loss: 762.375 | Validate Accuracy: 0.907 | Validate Recall: 0.703 | Validate F1: 0.704
+2023-12-11 21:18:12,978 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:19:15,253 - model.py[line:155] - INFO: Epochs: 3 | Train Loss: 610.425 | Validate Loss: 563.953 | Validate Accuracy: 0.928 | Validate Recall: 0.783 | Validate F1: 0.782
+2023-12-11 21:19:15,321 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:20:17,854 - model.py[line:155] - INFO: Epochs: 4 | Train Loss: 455.261 | Validate Loss: 459.317 | Validate Accuracy: 0.941 | Validate Recall: 0.823 | Validate F1: 0.818
+2023-12-11 21:20:17,919 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:21:20,338 - model.py[line:155] - INFO: Epochs: 5 | Train Loss: 370.811 | Validate Loss: 439.844 | Validate Accuracy: 0.945 | Validate Recall: 0.836 | Validate F1: 0.837
+2023-12-11 21:21:20,406 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:22:23,399 - model.py[line:155] - INFO: Epochs: 6 | Train Loss: 307.880 | Validate Loss: 390.540 | Validate Accuracy: 0.949 | Validate Recall: 0.858 | Validate F1: 0.853
+2023-12-11 21:22:23,464 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:23:25,766 - model.py[line:155] - INFO: Epochs: 7 | Train Loss: 259.807 | Validate Loss: 352.542 | Validate Accuracy: 0.952 | Validate Recall: 0.867 | Validate F1: 0.862
+2023-12-11 21:23:25,832 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:24:28,094 - model.py[line:155] - INFO: Epochs: 8 | Train Loss: 220.291 | Validate Loss: 345.556 | Validate Accuracy: 0.956 | Validate Recall: 0.875 | Validate F1: 0.871
+2023-12-11 21:24:28,160 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:25:30,640 - model.py[line:155] - INFO: Epochs: 9 | Train Loss: 190.842 | Validate Loss: 349.366 | Validate Accuracy: 0.954 | Validate Recall: 0.876 | Validate F1: 0.870
+2023-12-11 21:26:32,943 - model.py[line:155] - INFO: Epochs: 10 | Train Loss: 167.698 | Validate Loss: 354.377 | Validate Accuracy: 0.957 | Validate Recall: 0.873 | Validate F1: 0.872
+2023-12-11 21:26:33,013 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:27:35,096 - model.py[line:155] - INFO: Epochs: 11 | Train Loss: 147.336 | Validate Loss: 348.386 | Validate Accuracy: 0.958 | Validate Recall: 0.886 | Validate F1: 0.881
+2023-12-11 21:27:35,167 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:28:38,180 - model.py[line:155] - INFO: Epochs: 12 | Train Loss: 131.915 | Validate Loss: 356.423 | Validate Accuracy: 0.959 | Validate Recall: 0.887 | Validate F1: 0.884
+2023-12-11 21:28:38,246 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:29:41,274 - model.py[line:155] - INFO: Epochs: 13 | Train Loss: 119.142 | Validate Loss: 365.122 | Validate Accuracy: 0.960 | Validate Recall: 0.889 | Validate F1: 0.885
+2023-12-11 21:29:41,341 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:30:43,174 - model.py[line:155] - INFO: Epochs: 14 | Train Loss: 106.233 | Validate Loss: 361.044 | Validate Accuracy: 0.961 | Validate Recall: 0.894 | Validate F1: 0.889
+2023-12-11 21:30:43,239 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:31:45,321 - model.py[line:155] - INFO: Epochs: 15 | Train Loss: 97.456 | Validate Loss: 365.272 | Validate Accuracy: 0.961 | Validate Recall: 0.888 | Validate F1: 0.885
+2023-12-11 21:32:47,980 - model.py[line:155] - INFO: Epochs: 16 | Train Loss: 86.319 | Validate Loss: 371.940 | Validate Accuracy: 0.962 | Validate Recall: 0.895 | Validate F1: 0.889
+2023-12-11 21:33:51,069 - model.py[line:155] - INFO: Epochs: 17 | Train Loss: 80.706 | Validate Loss: 393.869 | Validate Accuracy: 0.962 | Validate Recall: 0.893 | Validate F1: 0.890
+2023-12-11 21:33:51,143 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:34:53,494 - model.py[line:155] - INFO: Epochs: 18 | Train Loss: 74.483 | Validate Loss: 396.200 | Validate Accuracy: 0.961 | Validate Recall: 0.891 | Validate F1: 0.887
+2023-12-11 21:35:55,105 - model.py[line:155] - INFO: Epochs: 19 | Train Loss: 68.186 | Validate Loss: 404.971 | Validate Accuracy: 0.963 | Validate Recall: 0.893 | Validate F1: 0.887
+2023-12-11 21:36:57,934 - model.py[line:155] - INFO: Epochs: 20 | Train Loss: 63.259 | Validate Loss: 425.630 | Validate Accuracy: 0.963 | Validate Recall: 0.896 | Validate F1: 0.892
+2023-12-11 21:36:58,000 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:38:00,854 - model.py[line:155] - INFO: Epochs: 21 | Train Loss: 59.519 | Validate Loss: 432.885 | Validate Accuracy: 0.962 | Validate Recall: 0.894 | Validate F1: 0.889
+2023-12-11 21:39:02,809 - model.py[line:155] - INFO: Epochs: 22 | Train Loss: 55.694 | Validate Loss: 442.347 | Validate Accuracy: 0.962 | Validate Recall: 0.895 | Validate F1: 0.891
+2023-12-11 21:40:05,449 - model.py[line:155] - INFO: Epochs: 23 | Train Loss: 53.030 | Validate Loss: 440.107 | Validate Accuracy: 0.962 | Validate Recall: 0.892 | Validate F1: 0.886
+2023-12-11 21:41:07,205 - model.py[line:155] - INFO: Epochs: 24 | Train Loss: 49.172 | Validate Loss: 461.079 | Validate Accuracy: 0.963 | Validate Recall: 0.894 | Validate F1: 0.888
+2023-12-11 21:42:09,660 - model.py[line:155] - INFO: Epochs: 25 | Train Loss: 46.358 | Validate Loss: 451.415 | Validate Accuracy: 0.963 | Validate Recall: 0.898 | Validate F1: 0.892
+2023-12-11 21:42:09,725 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:43:12,222 - model.py[line:155] - INFO: Epochs: 26 | Train Loss: 43.263 | Validate Loss: 471.338 | Validate Accuracy: 0.962 | Validate Recall: 0.896 | Validate F1: 0.892
+2023-12-11 21:44:14,975 - model.py[line:155] - INFO: Epochs: 27 | Train Loss: 40.479 | Validate Loss: 467.518 | Validate Accuracy: 0.964 | Validate Recall: 0.899 | Validate F1: 0.894
+2023-12-11 21:44:15,041 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:45:17,742 - model.py[line:155] - INFO: Epochs: 28 | Train Loss: 38.263 | Validate Loss: 476.671 | Validate Accuracy: 0.964 | Validate Recall: 0.900 | Validate F1: 0.894
+2023-12-11 21:45:17,808 - model.py[line:168] - INFO: --------Save best model!--------
+2023-12-11 21:46:19,927 - model.py[line:155] - INFO: Epochs: 29 | Train Loss: 36.310 | Validate Loss: 499.815 | Validate Accuracy: 0.963 | Validate Recall: 0.895 | Validate F1: 0.890
+2023-12-11 21:47:21,930 - model.py[line:155] - INFO: Epochs: 30 | Train Loss: 34.861 | Validate Loss: 510.789 | Validate Accuracy: 0.962 | Validate Recall: 0.893 | Validate F1: 0.889
+2023-12-11 21:48:24,616 - model.py[line:155] - INFO: Epochs: 31 | Train Loss: 33.134 | Validate Loss: 526.605 | Validate Accuracy: 0.962 | Validate Recall: 0.897 | Validate F1: 0.891
+2023-12-11 21:49:26,950 - model.py[line:155] - INFO: Epochs: 32 | Train Loss: 31.532 | Validate Loss: 514.805 | Validate Accuracy: 0.963 | Validate Recall: 0.895 | Validate F1: 0.890
+2023-12-11 21:50:30,191 - model.py[line:155] - INFO: Epochs: 33 | Train Loss: 30.497 | Validate Loss: 533.218 | Validate Accuracy: 0.962 | Validate Recall: 0.895 | Validate F1: 0.890
+2023-12-11 21:51:32,566 - model.py[line:155] - INFO: Epochs: 34 | Train Loss: 27.581 | Validate Loss: 542.008 | Validate Accuracy: 0.964 | Validate Recall: 0.898 | Validate F1: 0.892
+2023-12-11 21:52:35,237 - model.py[line:155] - INFO: Epochs: 35 | Train Loss: 27.652 | Validate Loss: 546.512 | Validate Accuracy: 0.963 | Validate Recall: 0.897 | Validate F1: 0.891
+2023-12-11 21:53:37,908 - model.py[line:155] - INFO: Epochs: 36 | Train Loss: 26.797 | Validate Loss: 541.339 | Validate Accuracy: 0.963 | Validate Recall: 0.897 | Validate F1: 0.891
+2023-12-11 21:54:40,351 - model.py[line:155] - INFO: Epochs: 37 | Train Loss: 25.082 | Validate Loss: 549.095 | Validate Accuracy: 0.963 | Validate Recall: 0.896 | Validate F1: 0.890
+2023-12-11 21:55:42,979 - model.py[line:155] - INFO: Epochs: 38 | Train Loss: 24.827 | Validate Loss: 550.006 | Validate Accuracy: 0.963 | Validate Recall: 0.897 | Validate F1: 0.891
+2023-12-11 21:55:42,979 - model.py[line:177] - INFO: Early stopping at epoch 38.
+Epochs: 38 | Train Loss: 24.827 | Validate Loss: 550.006 | Validate Accuracy: 0.963 | Validate Recall: 0.897 | Validate F1: 0.891 
+Best F1: 0.894
+2023-12-11 21:55:42,980 - model.py[line:189] - INFO: Training Finished!
+2023-12-11 21:55:43,044 - execute.py[line:57] - INFO: -------Loading Model From /home/noitom-server/PycharmProjects/pythonProject/Intelligent-Health-System/nlp/ner/BiGRU-Softmax/model/model.pth--------
+2023-12-11 21:55:43,065 - execute.py[line:61] - INFO: -------Model Loaded--------
+2023-12-11 21:55:50,605 - execute.py[line:73] - INFO: Test Loss: 410.142860970846 | Test Accuracy: 0.9683184501791638 | Test Recall: 0.9154070163917805 | Test F1: 0.913073787609583
+2023-12-11 21:55:50,605 - execute.py[line:75] - INFO: Testing finished.

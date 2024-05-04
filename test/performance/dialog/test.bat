@@ -1,0 +1,1 @@
+jmeter -n -t dialog.jmx -l result.csv -e -o report

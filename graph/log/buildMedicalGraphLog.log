@@ -1,0 +1,6 @@
+2024-04-26 11:49:56,923 - buildMedicalGraph_.py[line:488] - ERROR: Set relation failed! Relation is: {'relation_type': 'ADE_Disease', 'relation_id': 'R288', 'head_entity_id': 'T568', 'tail_entity_id': 'T564'}, i is 6.
+2024-04-26 11:49:56,924 - buildMedicalGraph_.py[line:488] - ERROR: Set relation failed! Relation is: {'relation_type': 'ADE_Disease', 'relation_id': 'R352', 'head_entity_id': 'T684', 'tail_entity_id': 'T679'}, i is 6.
+2024-04-26 11:49:57,014 - __init__.py[line:113] - DEBUG: Building prefix dict from the default dictionary ...
+2024-04-26 11:49:57,016 - __init__.py[line:132] - DEBUG: Loading model from cache C:\Users\22350\AppData\Local\Temp\jieba.cache
+2024-04-26 11:49:57,578 - __init__.py[line:164] - DEBUG: Loading model cost 0.564 seconds.
+2024-04-26 11:49:57,579 - __init__.py[line:166] - DEBUG: Prefix dict has been built successfully.

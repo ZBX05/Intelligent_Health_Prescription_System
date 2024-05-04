@@ -1,0 +1,2 @@
+2023-12-04 12:03:23,663 - model.py[line:98] - INFO: --------Start Training--------
+2023-12-04 12:03:35,025 - model.py[line:125] - INFO: Epochs: 1 | Train Loss: 34.872 | Validate Loss: 4.047 | Validate Accuracy: 0.000 | Validate Recall: 0.000 | Validate F1: 0.000

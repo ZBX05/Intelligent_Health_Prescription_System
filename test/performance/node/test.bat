@@ -1,0 +1,1 @@
+jmeter -n -t node.jmx -l result.csv -e -o report
