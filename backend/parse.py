@@ -74,9 +74,9 @@ def get_intention(model:IRModel,tokenizer:BertTokenizer,tokenizer_max_length:int
     input_ids=torch.tensor(input_ids,dtype=torch.long,device='cpu')
     masks=input_ids.gt(ids_padding_value).to('cpu')
     logits=model(input_ids=input_ids,attention_mask=masks)
-    pred=logits.argmax(dim=1).tolist()
-    output_dict["prediction"]=pred[0]
-    output_dict["prediction_in_char"]=intentions_dict[pred[0]]
+    pred=logits.argmax().tolist()
+    output_dict["prediction"]=pred
+    output_dict["prediction_in_char"]=intentions_dict[pred]
     return output_dict
 
 def named_entities_recognize(model:NERModel|IRModel,tokenizer:BertTokenizer,tokenizer_max_length:int,input_text:str,mapping_dict:dict,
