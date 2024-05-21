@@ -2,22 +2,12 @@ from flask import Flask,render_template,request,redirect,url_for,session,Respons
 from flask_session import Session
 import os
 import time
-from dialog import Dialog,get_dialog
+from dialog import Dialog
 from py2neo import Graph
-from sql import Database,get_database
+from sql import Database
 from functionsAndClasses import *
-from graph_ import get_graph
 
 web_config=WebConfig(os.getcwd()+'\\backend\\config\\web_config.cfg')
-admin_database=Database(host=web_config.sql_host,port=web_config.sql_port,user=web_config.sql_user,password=web_config.sql_password,
-                  target=web_config.sql_db)
-admin_graph=Graph(host=web_config.graph_host,user=web_config.graph_user,password=web_config.graph_password)
-# gh=[Graph(host=web_config.graph_host,user=web_config.graph_user,password=web_config.graph_password) 
-#    for _ in range(web_config.app_data_num)]
-# db=[Database(host=web_config.sql_host,port=web_config.sql_port,user=web_config.sql_user,password=web_config.sql_password,
-#                   target=web_config.sql_db) for _ in range(web_config.app_data_num)]
-# qa=[Dialog(Graph(host=web_config.graph_host,user=web_config.graph_user,password=web_config.graph_password),web_config.dialog_too_long) 
-#     for _ in range(web_config.app_service_num)]
 gh=Graph(host=web_config.graph_host,user=web_config.graph_user,password=web_config.graph_password)
 db=Database(host=web_config.sql_host,port=web_config.sql_port,user=web_config.sql_user,password=web_config.sql_password,
                   target=web_config.sql_db)
@@ -51,7 +41,8 @@ def account() -> str|Response:
         return do_account_logout()
     if(user["type"]=="admin"):
         session["message"]=[]
-        message_tuple=admin_database.get_message_unread(user["email"])
+        database=db
+        message_tuple=database.get_message_unread(user["email"])
         if(message_tuple==()):
             message='''<div class="message-item">
                             <b>无消息</b>
@@ -131,10 +122,7 @@ def history() -> str|Response:
         history_data=session["history"]
     except KeyError:
         email=user["email"]
-        if(user["type"]=='admin'):
-            database=admin_database
-        else:
-            database=get_database(db)
+        database=db
         history_data=database.get_history(email)
         session["history"]=history_data
     user_history=""
@@ -152,7 +140,7 @@ def do_login() -> dict:
     form=request.form.to_dict()
     email=form["email"]
     password=form["password"]
-    database=get_database(db)
+    database=db
     if(database.check_user_email(email) is None):
         return {"type":"info","id":"email","content":"邮箱错误。"}
     if(not database.check_user_password(email,password)):
@@ -169,7 +157,7 @@ def do_register() -> dict:
         return {"type":"info","content":check[1]}
     email=check[1]
     password=check[2]
-    database=get_database(db)
+    database=db
     if(database.check_user_email(email) is None):
         database.create_user(email,password)
         return {"type":"url","content":url_for('default')}
@@ -180,7 +168,7 @@ def do_register() -> dict:
 def do_forget() -> dict:
     form=request.form.to_dict()
     email=form["email"]
-    database=get_database(db)
+    database=db
     if(database.check_user_email(email) is None):
         return {"type":"info","content":"邮箱错误。"}
     elif(database.get_user_state(email)=='ban'):
@@ -196,10 +184,7 @@ def do_dialog() -> dict:
     except KeyError:
         session.clear()
         return {"type":"url","content":url_for('default')}
-    if(user["type"]=='admin'):
-        database=admin_database
-    else:
-        database=get_database(db)
+    database=db
     form=request.form.to_dict()
     request_time=form["time"]
     question=form["question"]
@@ -210,7 +195,7 @@ def do_dialog() -> dict:
                 answer_text=record["answer"]
         raise ValueError("Could not find question.")
     except Exception as e:
-        qa_used=get_dialog(qa)
+        qa_used=qa
         if(user["type"]=='admin'):
             answer_text=str(qa_used(question,'dev'))
         else:
@@ -238,8 +223,8 @@ def do_account_change() -> dict:
         session.clear()
         return {"type":"error","content":url_for('default')}
     form=request.form.to_dict()
+    database=db
     if(user["type"]=='usr'):
-        database=get_database(db)
         password=form["password"]
         password_again=form["password_again"]
         result,info=check_password_format(password,password_again)
@@ -249,7 +234,6 @@ def do_account_change() -> dict:
         session.clear()
         return {"type":"url","content":url_for('default')}
     elif(user["type"]=='admin'):
-        database=admin_database
         email=form["email"]
         password=form["password"]
         password_again=form["password_again"]
@@ -276,7 +260,7 @@ def do_account_create() -> dict:
         return {"type":"info","content":check[1]}
     email=check[1]
     password=check[2]
-    database=get_database(db)
+    database=db
     if(database.check_user_email(email) is None):
         database.create_user(email,password)
         return {"type":"info","content":"创建用户成功。"}
@@ -293,25 +277,26 @@ def do_account_ban() -> dict:
     form=request.form.to_dict()
     action_type=form["type"]
     email=form["email"]
+    database=db
     if(action_type=='ban'):
         if(email==user["email"]):
             return {"type":"info","id":"email-2","content":"您正在尝试封禁自己。"}
-        if(admin_database.check_user_email(email) is None):
+        if(database.check_user_email(email) is None):
             return {"type":"info","id":"email-2","content":"未找到用户。"}
-        _,_,user_type,user_current_state=admin_database.get_user_data(email)
+        _,_,user_type,user_current_state=database.get_user_data(email)
         if(user_current_state=='ban'):
             return {"type":"info","id":"email-2","content":"该用户已处于封禁状态。"}
         if(user_type=='admin'):
             return {"type":"info","id":"email-2","content":"该用户为管理员。"}
-        admin_database.set_user_state(email,'ban')
+        database.set_user_state(email,'ban')
         return {"type":"info","id":"alert","content":"封禁成功。"}
     elif(action_type=='unban'):
-        if(admin_database.check_user_email(email) is None):
+        if(database.check_user_email(email) is None):
             return {"type":"info","id":"email-2","content":"未找到用户。"}
-        _,_,user_type,user_current_state=admin_database.get_user_data(email)
+        _,_,user_type,user_current_state=database.get_user_data(email)
         if(user_current_state=='active'):
             return {"type":"info","id":"email-2","content":"该用户未被封禁。"}
-        admin_database.set_user_state(email,'active')
+        database.set_user_state(email,'active')
         return {"type":"info","id":"alert","content":"解封成功。"}
     
 @app.route('/do/account/message',methods=['POST'])
@@ -323,20 +308,18 @@ def do_account_message() -> dict:
         return {"type":"url","content":url_for('default')}
     form=request.form.to_dict()
     idx=eval(form["idx"])
-    admin_database.read_message(session["message"][idx])
+    database=db
+    database.read_message(session["message"][idx])
     return {"type":"info","content":"success"}
 
 @app.route('/do/graph',methods=['POST'])
 def do_graph() -> dict:
     try:
-        user=session["user"]
+        session["user"]
     except KeyError:
         session.clear()
         return {"type":"url","content":url_for('default')}
-    if(user["type"]=='admin'):
-        graph=admin_graph
-    else:
-        graph=get_graph(gh)
+    graph=gh
     form=request.form.to_dict()
     name=form["name"]
     if(name==''):

@@ -485,9 +485,12 @@ function dialog_request(){
     xhttp.send("time="+time+"&question="+question);
 }
 
-function change_password_request(){
+function change_password_request(admin=false){
     var password=document.getElementById("password").value;
     var password_again=document.getElementById("password-again").value;
+    if(admin){
+        var email=document.getElementById("email").value;
+    }
     var xhttp=new XMLHttpRequest();
     xhttp.timeout=4000;
     xhttp.ontimeout=function(){
@@ -514,7 +517,12 @@ function change_password_request(){
     }
     xhttp.open("POST",server+"/do/account/change",true);
     xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xhttp.send("password="+password+"&password_again="+password_again);
+    if(admin){
+        xhttp.send("email="+email+"&password="+password+"&password_again="+password_again);
+    }
+    else{
+        xhttp.send("password="+password+"&password_again="+password_again);
+    }
 }
 
 function ban_request(){
