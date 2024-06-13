@@ -131,4 +131,5 @@ repo                    #仓库根目录
    |- backend           #后端模块 
    |- frontend          #前端模块
    |- database          #数据库查询语句
+   |- test              #系统测试
 ```
