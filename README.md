@@ -63,7 +63,7 @@
 | Tqdm | >=4.66.1 |
 | TorchCRF | >=1.1.0 |
 | Flask | >=3.0.0 |
-| Flas Session | >=0.4.0 |
+| Flask Session | >=0.4.0 |
 | lxml | >=4.9.3 |
 | py_stringmatching | >=0.4.3 |
 | Jieba | >=0.42.1 |
